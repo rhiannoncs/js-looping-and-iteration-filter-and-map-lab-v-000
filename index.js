@@ -12,5 +12,5 @@ function exactMatch(drivers, attributeAndValue) {
   const attribute = Object.keys(attributeAndValue)[0];
   const value = Object.values(attributeAndValue)[0];
   
-  return drivers.filter( function (driver) {return driver[] === })
+  return drivers.filter( function (driver) {return driver[attribute] === value; });
 }
