@@ -14,3 +14,9 @@ function exactMatch(drivers, attributeAndValue) {
   
   return drivers.filter( function (driver) {return driver[attribute] === value; });
 }
+
+function exactMatchToList(drivers, attributeAndValue) {
+  const selectDrivers = exactMatch(drivers, attributeAndValue);
+  
+  return selectDrivers.map(function (driver) {return driver.name; });
+}
